@@ -20,5 +20,48 @@
   "personal_experience": [
     "https://fanzheng.org/post/d2l-notes.html"
   ],
-  "access_limits": "kexue.fm direct requests returned 403. Article 4277 body read via spaces.ac.cn. Article 4765 initially indexed/opened, body recheck returned 403. Articles 9660 and 9526 only partially available via search index."
+  "access_limits": "kexue.fm direct requests returned 403. Article 4277 body read via spaces.ac.cn. Article 4765 initially indexed/opened, body recheck returned 403. Articles 9660 and 9526 only partially available via search index.",
+  "repositories": {
+    "d2l_zh": {
+      "repository": "https://github.com/d2l-ai/d2l-zh",
+      "ref": "master",
+      "commit": "e6b18ccea71451a55fcd861d7b96fddf2587b09a",
+      "commit_date": "2023-08-18T04:59:12Z",
+      "snapshot_url": "https://github.com/d2l-ai/d2l-zh/tree/e6b18ccea71451a55fcd861d7b96fddf2587b09a",
+      "depth": "selected chapters, installation and dependencies; not a full repository audit"
+    },
+    "deeplearning_ai_books": {
+      "repository": "https://github.com/fengdu78/deeplearning_ai_books",
+      "ref": "master",
+      "commit": "0aed57582bb9334f3e8cd40e5a38b821161e33ab",
+      "commit_date": "2022-03-08T22:43:27Z",
+      "snapshot_url": "https://github.com/fengdu78/deeplearning_ai_books/tree/0aed57582bb9334f3e8cd40e5a38b821161e33ab",
+      "depth": "README course outline and overlap mapping; historical code not validated"
+    },
+    "happy_llm": {
+      "repository": "https://github.com/datawhalechina/happy-llm",
+      "ref": "main",
+      "commit": "1e0b3a1e6f8936b8ba4bbd0673e8e2227d196c96",
+      "commit_date": "2026-08-08T17:17:26Z",
+      "snapshot_url": "https://github.com/datawhalechina/happy-llm/tree/1e0b3a1e6f8936b8ba4bbd0673e8e2227d196c96",
+      "depth": "README chapter outline and learning/environment guide; experiments not executed"
+    },
+    "easy_rl": {
+      "repository": "https://github.com/datawhalechina/easy-rl",
+      "ref": "master",
+      "commit": "6b7df8451f74f16d5efb6abc1b94a8746890a0ad",
+      "commit_date": "2025-12-30T15:48:17Z",
+      "snapshot_url": "https://github.com/datawhalechina/easy-rl/tree/6b7df8451f74f16d5efb6abc1b94a8746890a0ad",
+      "depth": "README and chapter index/question entry; algorithms not all reproduced"
+    },
+    "embodied_ai_guide": {
+      "repository": "https://github.com/TianxingChen/Embodied-AI-Guide",
+      "ref": "main",
+      "commit": "5fd7fd85723128309464547cacfb687c04bdd0f7",
+      "commit_date": "2026-08-26T18:53:11Z",
+      "snapshot_url": "https://github.com/TianxingChen/Embodied-AI-Guide/tree/5fd7fd85723128309464547cacfb687c04bdd0f7",
+      "depth": "README resource map and RoboTwin/ACT tutorial scope; simulator not installed"
+    }
+  },
+  "scope": "Source index, pinned versions and curriculum mappings. Upstream repositories are not vendored. M2-M4 labs are planned, not implemented."
 }

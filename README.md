@@ -1,26 +1,37 @@
-# 机器学习与深度学习：5 天基础速学
+# AI 基础学习空间
 
-以《动手学深度学习》中文版 PyTorch 路线为主线，配合苏剑林科学空间的机制解释和 scikit-learn 的传统机器学习实验。每天 4–5 小时，推荐 **5 天约 23 小时**；3 天完成前半段核心流程。
+以五套开源材料为来源，按共同基础 → 深度学习 → LLM / 强化学习 → 具身智能组织长期学习。保留 `ml-dl-bootcamp` 仓库名，前三天是起步课，后续逐步积累推导、代码、实验和复述记录。
 
-**这次的“完成”指：能够解释基础机制，独立改写关键步骤，在小数据集上复现代表性实验，并给出可靠评估。** 15–25 小时不能等同于学完整个机器学习领域、逐章复现 D2L 或具备研究级熟练度。
+**目标是能解释机制、独立改写关键步骤，并在小任务上验证。** 按已有 Python 和大学基础数学估计，去掉重复内容后约需 **200–300 小时**；每天 4–5 小时，约 40–75 个学习日。这不包含逐题完成五套材料、完整训练大模型或掌握具身指南的全部外链课程。
 
-入口：[完整课表](docs/CURRICULUM.md) · [资料筛选与阅读顺序](docs/RESOURCES.md) · [服务器使用](docs/SERVER.md) · [实测检查记录](docs/VERIFICATION.md) · [学习进度](notes/PROGRESS.md)
+入口：[长期路线](docs/ROADMAP.md) · [五套来源与阅读顺序](docs/RESOURCES.md) · [前三天课表](docs/CURRICULUM.md) · [算力与预算](docs/COMPUTE_BUDGET.md) · [学习进度](notes/PROGRESS.md)
 
-## 每天做什么
+## 教学模块
+
+| 模块 | 内容与来源 | 预计学习时间 | 仓库当前准备情况 |
+|---|---|---:|---|
+| [M0 共同基础](modules/00-foundations.md) | 数学、PyTorch、传统 ML、数据划分；D2L + sklearn | 20–30h | 回归和传统 ML 参考实验可用 |
+| [M1 深度学习](modules/01-deep-learning.md) | D2L 主线，吴恩达补充优化、诊断和项目方法 | 50–70h | CNN、序列、注意力的小型参考实验可用 |
+| [M2 大语言模型](modules/02-llm.md) | Happy-LLM；复用 M1 的 Transformer 基础 | 35–50h | 已设计章节映射与任务，实验待建设 |
+| [M3 强化学习](modules/03-reinforcement-learning.md) | Easy-RL；MDP、价值、策略、DQN/PPO | 35–50h | 已设计章节映射与任务，实验待建设 |
+| [M4 具身智能](modules/04-embodied-ai.md) | Embodied-AI-Guide；仿真、模仿学习、一个操作任务 | 35–55h | 已限定范围与验收，环境和实验待建设 |
+| [M5 综合复盘](modules/05-integration.md) | 串联模型、目标、数据、决策与评估 | 15–25h | 复盘问题和交付要求已列出 |
+
+逐模块估算合计 190–280 小时，整体预算取整为 200–300 小时。前三天的 13.5 小时已经包含在 M0/M1 中，不重复计算。学习时长均为规划估计，不是实测完成时长。
+
+## 先完成前三天
 
 | 天 | 主题 | 时间（含休息） | 当天交付 |
 |---|---|---:|---|
-| [Day 1](lessons/day01.md) | 张量、梯度、线性回归、数据划分 | 4.5h | 手算/自动微分对照、SGD 与解析解、学习率实验 |
-| [Day 2](lessons/day02.md) | Softmax、交叉熵、MLP、正则化 | 4.5h | Fashion-MNIST 分类、训练/验证曲线、一次消融 |
-| [Day 3](lessons/day03.md) | 卷积、LeNet、残差、训练调试 | 4.5h | CNN 基线、逐层 shape、错误预测分析 |
-| [Day 4](lessons/day04.md) | 传统 ML、交叉验证、PCA、K-means | 4.5h | 模型比较表、无泄漏 Pipeline、泛化说明 |
-| [Day 5](lessons/day05.md) | RNN/GRU、注意力、Transformer | 5h | 时序基线、手写 Attention、微型 Transformer 实验 |
+| [Day 1](lessons/day01.md) | 张量、梯度、线性回归、数据划分 | 4.5h | 手算/自动微分对照、全批量梯度下降与解析解、学习率对照 |
+| [Day 2](lessons/day02.md) | Softmax、交叉熵、MLP、训练循环 | 4.5h | 相同数据上的两个分类基线、自己写的核心循环 |
+| [Day 3](lessons/day03.md) | 评估、卷积、LeNet、结果分析 | 4.5h | 逐层 shape、一个 CNN 实验、验证集错例分析 |
 
-默认前提：会写 Python 函数/类，能读矩阵乘法、求导和基础概率。先做 [15 分钟自测](docs/CURRICULUM.md#开始前的自测)，据此降载。这里按天编号，不绑定日历日期。
+先做 [15 分钟自测](docs/CURRICULUM.md#开始前的自测)。若 Day 2 结束仍无法独立解释训练循环，Day 3 用于巩固 MLP，卷积顺延。原 `day04` / `day05` 保留为传统 ML 与序列/注意力的后续专题，完成时间由前置能力决定。
 
 ## 开始学习
 
-服务器上的课程目录已经准备在 `/root/autodl-tmp/ml-dl-bootcamp`。进入后：
+已准备的服务器课程目录是 `/root/autodl-tmp/ml-dl-bootcamp`：
 
 ```bash
 cd /root/autodl-tmp/ml-dl-bootcamp
@@ -29,24 +40,17 @@ python -m labs.environment
 python -m labs.linear
 ```
 
-再打开 [Day 1 工作本](notebooks/day01.ipynb)，按照对应 lesson 完成推导、改写和复述。Jupyter/VS Code 的连接方式见 [服务器说明](docs/SERVER.md)。运行参考代码只是第一步；所有工作本的个人作答区仍待你完成。
+打开 [Day 1 工作本](notebooks/day01.ipynb)，按 lesson 推导、改写和复述。[服务器说明](docs/SERVER.md)包含连接方式；[实测记录](docs/VERIFICATION.md)区分准备检查和正式学习实验。前两天的数学和小型 CPU 练习可在本地完成，但本地 Python 环境尚未核验。所有个人作答区保持待填写。
 
 ## 仓库怎么用
 
-- `lessons/`：每日精确到分钟的安排、阅读章节、练习和验收。
-- `notebooks/`：每日工作本，含实验入口和独立作答区。
-- `labs/`：短小、可直接阅读的参考实现；训练循环不隐藏在 `d2l` helper 中。
-- `notes/`：学习日志、结课检查和进度；学习完成状态由你实际作答决定。
-- `references/sources.lock.json`：D2L 固定版本、资料核验日期。
-- `runs/`：运行自动生成的参数、指标、曲线；默认不进 Git。
-- `data/`：缓存 Fashion-MNIST；不进 Git。
+- `modules/`：长期模块的前置能力、阅读映射、实验任务与验收。
+- `lessons/`、`notebooks/`：起步课和已有专题工作本。
+- `labs/`：短小、可读的参考实现；训练循环不隐藏在 `d2l` helper 中。
+- `notes/`：学习日志、阶段检查与进度，以实际作答为准。
+- `references/sources.lock.json`：五个上游仓库的固定版本及核验范围；从资料页访问原文。
+- `runs/`、`data/`：实验输出与数据缓存，默认不进 Git。
 
-每次实验生成独立目录，不覆盖已有结果。课程默认只观察验证集；确定最终配置后才加 `--test`。不要为了超过一个目标数字反复查看测试集。
+五套材料以来源索引、固定版本和教学映射纳入；原文、原始代码与许可在各自上游保留，不整库复制。D2L 是 DL 主线，吴恩达用于补充，重复的反传/CNN/Attention 不重学一遍。科学空间用于当前机制问题的定向阅读。
 
-## 与原教材的关系
-
-D2L 中文源码固定为 [`e6b18ccea714`](https://github.com/d2l-ai/d2l-zh/tree/e6b18ccea71451a55fcd861d7b96fddf2587b09a)。课程保留基础模型与训练概念，使用服务器现有 PyTorch，并补入传统 ML 和评估训练。
-
-`linear` / `vision` 是基础算法的教学改编；残差 CNN 是缩小示例，**不是完整 ResNet**。`sequence` 使用合成时序；`attention` 使用首词元检索任务，**不是语言模型或机器翻译复现**。原书各章仍是阅读与进一步复现的依据，参见 [覆盖层级](docs/CURRICULUM.md#覆盖层级与延期内容)。
-
-资料版权归各作者。仓库不转载科学空间或经验贴全文；来源与改编说明见 [ATTRIBUTION](ATTRIBUTION.md)。
+每次实验生成独立目录。模型选择只看训练/验证，最终配置冻结后才使用 `--test`。已有残差 CNN 是缩小示例；序列与注意力使用合成任务，不等同于完整 ResNet、语言模型或机器翻译复现。版权与改编范围见 [ATTRIBUTION](ATTRIBUTION.md)。
