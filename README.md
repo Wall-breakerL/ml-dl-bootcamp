@@ -6,6 +6,8 @@
 
 入口：[长期路线](docs/ROADMAP.md) · [五套来源与阅读顺序](docs/RESOURCES.md) · [前三天课表](docs/CURRICULUM.md) · [算力与预算](docs/COMPUTE_BUDGET.md) · [学习进度](notes/PROGRESS.md)
 
+**框架约定：各模块的神经网络实现以 PyTorch 为主。** 入门阶段优先原生 PyTorch，先理解完整训练循环，再按需使用其上层工具。其他框架的资料用于参考原理，复现时优先选择或改写为 PyTorch；数学与数据处理可用 NumPy，传统机器学习保留 scikit-learn，仿真器按任务选型。
+
 ## 教学模块
 
 | 模块 | 内容与来源 | 预计学习时间 | 仓库当前准备情况 |
