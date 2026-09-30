@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-09-30",
+  "d2l_zh": {
+    "repository": "https://github.com/d2l-ai/d2l-zh",
+    "ref": "master",
+    "commit": "e6b18ccea71451a55fcd861d7b96fddf2587b09a",
+    "commit_date": "2023-08-18T04:59:12Z",
+    "depth": "selected chapter mapping, installation and dependency inspection; not full repository audit"
+  },
+  "course_implementation": "modern PyTorch teaching adaptations; no d2l package installed",
+  "primary_resources": [
+    "https://zh.d2l.ai/",
+    "https://courses.d2l.ai/zh-v2/",
+    "https://www.spaces.ac.cn/archives/4277",
+    "https://spaces.ac.cn/archives/4765/comment-page-1?replyTo=8871",
+    "https://karpathy.github.io/2019/04/25/recipe/",
+    "https://scikit-learn.org/stable/getting_started.html",
+    "https://scikit-learn.org/stable/common_pitfalls.html"
+  ],
+  "personal_experience": [
+    "https://fanzheng.org/post/d2l-notes.html"
+  ],
+  "access_limits": "kexue.fm direct requests returned 403. Article 4277 body read via spaces.ac.cn. Article 4765 initially indexed/opened, body recheck returned 403. Articles 9660 and 9526 only partially available via search index."
+}

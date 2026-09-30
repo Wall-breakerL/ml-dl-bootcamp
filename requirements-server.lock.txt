@@ -1,0 +1,13 @@
+torch==2.12.1+cu130
+torchvision==0.27.1+cu130
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.0
+ipykernel==7.3.0
+jupyterlab==4.5.9
+joblib==1.6.0
+threadpoolctl==3.7.0
+narwhals==2.26.0
+cloudpickle==3.1.2

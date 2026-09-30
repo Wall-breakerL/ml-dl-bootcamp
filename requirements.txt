@@ -1,0 +1,7 @@
+# Install into a venv with the server's working torch/torchvision inherited.
+numpy>=1.26,<3
+matplotlib>=3.8,<4
+pandas>=2.2,<3
+scikit-learn>=1.5,<2
+ipykernel>=6,<8
+jupyterlab>=4,<5

@@ -1,0 +1,290 @@
+{
+  "purpose": "repository preparation checks, not learner completion",
+  "held_out_test_evaluated": false,
+  "runs": [
+    {
+      "experiment": "linear",
+      "args": {
+        "steps": 200,
+        "lr": 0.1,
+        "seed": 42
+      },
+      "metrics": {
+        "w": [
+          1.9993455766319048,
+          -3.400296937105185
+        ],
+        "b": 4.199269519996195,
+        "val_mse": 0.00010067313706168633,
+        "manual_autograd_max_error": 8.881784197001252e-16,
+        "least_squares": [
+          1.9993455766319046,
+          -3.400296937105187,
+          4.199269519996196
+        ]
+      },
+      "python": "3.12.3",
+      "torch": "2.12.1+cu130",
+      "cuda_runtime": "13.0",
+      "utc": "20260930T103238.190261Z",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "server_run_directory": "runs/20260930T103238.190261Z-linear"
+    },
+    {
+      "experiment": "classical",
+      "args": {
+        "seed": 42,
+        "quick": false,
+        "test": false
+      },
+      "metrics": {
+        "dataset": "sklearn_digits_8x8",
+        "split_seed": 42,
+        "cv": {
+          "dummy": {
+            "macro_f1_mean": 0.018331081210587852,
+            "macro_f1_std": 0.00016229857789870183
+          },
+          "logistic": {
+            "macro_f1_mean": 0.9644142919507686,
+            "macro_f1_std": 0.00354509483691434
+          },
+          "knn": {
+            "macro_f1_mean": 0.9726566389652115,
+            "macro_f1_std": 0.003060839818862863
+          },
+          "svm": {
+            "macro_f1_mean": 0.98035727190855,
+            "macro_f1_std": 0.00775645438872526
+          },
+          "naive_bayes": {
+            "macro_f1_mean": 0.8313180768312981,
+            "macro_f1_std": 0.019500860120480554
+          },
+          "tree": {
+            "macro_f1_mean": 0.83436560716549,
+            "macro_f1_std": 0.009850088268374285
+          },
+          "forest": {
+            "macro_f1_mean": 0.9740875801896894,
+            "macro_f1_std": 0.005274713839285006
+          },
+          "boosting": {
+            "macro_f1_mean": 0.9600038522613664,
+            "macro_f1_std": 0.006836546655234772
+          }
+        },
+        "selected": "svm",
+        "n_dev": 1437,
+        "n_test": 360,
+        "pca_components": 40,
+        "development_cluster_ari": 0.5213089697207351
+      },
+      "python": "3.12.3",
+      "torch": "2.12.1+cu130",
+      "cuda_runtime": "13.0",
+      "utc": "20260930T103250.071493Z",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "server_run_directory": "runs/20260930T103250.071493Z-classical"
+    },
+    {
+      "experiment": "sequence-rnn",
+      "args": {
+        "model": "rnn",
+        "epochs": 1,
+        "seed": 42,
+        "device": "cuda",
+        "smoke": true,
+        "test": false
+      },
+      "metrics": {
+        "validation_rmse": 0.7652383723405278,
+        "smoke_only": true,
+        "device": "cuda",
+        "validation_last_value_rmse": 0.0672876313328743
+      },
+      "python": "3.12.3",
+      "torch": "2.12.1+cu130",
+      "cuda_runtime": "13.0",
+      "utc": "20260930T103254.722652Z",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "server_run_directory": "runs/20260930T103254.722652Z-sequence-rnn"
+    },
+    {
+      "experiment": "sequence-gru",
+      "args": {
+        "model": "gru",
+        "epochs": 1,
+        "seed": 42,
+        "device": "cuda",
+        "smoke": true,
+        "test": false
+      },
+      "metrics": {
+        "validation_rmse": 0.6575906093881171,
+        "smoke_only": true,
+        "device": "cuda",
+        "validation_last_value_rmse": 0.0672876313328743
+      },
+      "python": "3.12.3",
+      "torch": "2.12.1+cu130",
+      "cuda_runtime": "13.0",
+      "utc": "20260930T103259.631223Z",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "server_run_directory": "runs/20260930T103259.631223Z-sequence-gru"
+    },
+    {
+      "experiment": "attention",
+      "args": {
+        "steps": 3,
+        "seed": 42,
+        "device": "cuda",
+        "smoke": true,
+        "test": false
+      },
+      "metrics": {
+        "manual_sdpa_max_error": 5.364418029785156e-07,
+        "causal_perturbation": "PASS",
+        "validation_accuracy": 0.11328125,
+        "chance_accuracy": 0.1,
+        "device": "cuda",
+        "task": "first_token_retrieval_not_language_modelling",
+        "smoke_only": true
+      },
+      "python": "3.12.3",
+      "torch": "2.12.1+cu130",
+      "cuda_runtime": "13.0",
+      "utc": "20260930T103304.851409Z",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "server_run_directory": "runs/20260930T103304.851409Z-attention"
+    },
+    {
+      "experiment": "vision-softmax",
+      "args": {
+        "model": "softmax",
+        "epochs": 1,
+        "batch_size": 256,
+        "lr": 0.001,
+        "optimizer": "adam",
+        "weight_decay": 0.0,
+        "dropout": 0.0,
+        "train_size": 0,
+        "seed": 42,
+        "device": "cuda",
+        "smoke": true,
+        "test": false
+      },
+      "metrics": {
+        "validation_accuracy": 0.203125,
+        "n_train": 512,
+        "n_val": 256,
+        "device": "cuda",
+        "split_seed": 42,
+        "smoke_only": true,
+        "parameters": 7850
+      },
+      "python": "3.12.3",
+      "torch": "2.12.1+cu130",
+      "cuda_runtime": "13.0",
+      "utc": "20260930T103406.939015Z",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "server_run_directory": "runs/20260930T103406.939015Z-vision-softmax"
+    },
+    {
+      "experiment": "vision-mlp",
+      "args": {
+        "model": "mlp",
+        "epochs": 1,
+        "batch_size": 256,
+        "lr": 0.001,
+        "optimizer": "adam",
+        "weight_decay": 0.0,
+        "dropout": 0.0,
+        "train_size": 0,
+        "seed": 42,
+        "device": "cuda",
+        "smoke": true,
+        "test": false
+      },
+      "metrics": {
+        "validation_accuracy": 0.33984375,
+        "n_train": 512,
+        "n_val": 256,
+        "device": "cuda",
+        "split_seed": 42,
+        "smoke_only": true,
+        "parameters": 203530
+      },
+      "python": "3.12.3",
+      "torch": "2.12.1+cu130",
+      "cuda_runtime": "13.0",
+      "utc": "20260930T103411.929595Z",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "server_run_directory": "runs/20260930T103411.929595Z-vision-mlp"
+    },
+    {
+      "experiment": "vision-lenet",
+      "args": {
+        "model": "lenet",
+        "epochs": 1,
+        "batch_size": 256,
+        "lr": 0.001,
+        "optimizer": "adam",
+        "weight_decay": 0.0,
+        "dropout": 0.0,
+        "train_size": 0,
+        "seed": 42,
+        "device": "cuda",
+        "smoke": true,
+        "test": false
+      },
+      "metrics": {
+        "validation_accuracy": 0.09765625,
+        "n_train": 512,
+        "n_val": 256,
+        "device": "cuda",
+        "split_seed": 42,
+        "smoke_only": true,
+        "parameters": 61706
+      },
+      "python": "3.12.3",
+      "torch": "2.12.1+cu130",
+      "cuda_runtime": "13.0",
+      "utc": "20260930T103416.951434Z",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "server_run_directory": "runs/20260930T103416.951434Z-vision-lenet"
+    },
+    {
+      "experiment": "vision-residual",
+      "args": {
+        "model": "residual",
+        "epochs": 1,
+        "batch_size": 256,
+        "lr": 0.001,
+        "optimizer": "adam",
+        "weight_decay": 0.0,
+        "dropout": 0.0,
+        "train_size": 0,
+        "seed": 42,
+        "device": "cuda",
+        "smoke": true,
+        "test": false
+      },
+      "metrics": {
+        "validation_accuracy": 0.08984375,
+        "n_train": 512,
+        "n_val": 256,
+        "device": "cuda",
+        "split_seed": 42,
+        "smoke_only": true,
+        "parameters": 9610
+      },
+      "python": "3.12.3",
+      "torch": "2.12.1+cu130",
+      "cuda_runtime": "13.0",
+      "utc": "20260930T103422.020547Z",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "server_run_directory": "runs/20260930T103422.020547Z-vision-residual"
+    }
+  ]
+}
