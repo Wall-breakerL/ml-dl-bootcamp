@@ -6,6 +6,8 @@
 
 入口：[长期路线](docs/ROADMAP.md) · [五套来源与阅读顺序](docs/RESOURCES.md) · [前三天课表](docs/CURRICULUM.md) · [算力与预算](docs/COMPUTE_BUDGET.md) · [学习进度](notes/PROGRESS.md)
 
+**当前接续（2026-09-30）：** 正在 [Day 0：1–2 小时预习](lessons/day00.md)，暂时停止出题，以阅读和解释为主。新会话先读 [接续说明](notes/SESSION_HANDOFF.md) 和学习进度。[补充材料调研](docs/SUPPLEMENTARY_RESOURCES.md)保留为候选，尚未全部纳入必修。
+
 **框架约定：各模块的神经网络实现以 PyTorch 为主。** 入门阶段优先原生 PyTorch，先理解完整训练循环，再按需使用其上层工具。其他框架的资料用于参考原理，复现时优先选择或改写为 PyTorch；数学与数据处理可用 NumPy，传统机器学习保留 scikit-learn，仿真器按任务选型。
 
 ## 教学模块
@@ -29,7 +31,7 @@
 | [Day 2](lessons/day02.md) | Softmax、交叉熵、MLP、训练循环 | 4.5h | 相同数据上的两个分类基线、自己写的核心循环 |
 | [Day 3](lessons/day03.md) | 评估、卷积、LeNet、结果分析 | 4.5h | 逐层 shape、一个 CNN 实验、验证集错例分析 |
 
-先做 [15 分钟自测](docs/CURRICULUM.md#开始前的自测)。若 Day 2 结束仍无法独立解释训练循环，Day 3 用于巩固 MLP，卷积顺延。原 `day04` / `day05` 保留为传统 ML 与序列/注意力的后续专题，完成时间由前置能力决定。
+进入 Day 1 且恢复练习后，可做 [15 分钟自测](docs/CURRICULUM.md#开始前的自测)。若 Day 2 结束仍无法独立解释训练循环，Day 3 用于巩固 MLP，卷积顺延。原 `day04` / `day05` 保留为传统 ML 与序列/注意力的后续专题，完成时间由前置能力决定。
 
 ## 开始学习
 
